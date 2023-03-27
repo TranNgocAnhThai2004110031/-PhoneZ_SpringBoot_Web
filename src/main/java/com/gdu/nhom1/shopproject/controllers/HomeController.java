@@ -23,20 +23,26 @@ import com.gdu.nhom1.shopproject.services.UserService;
 public class HomeController {
     @Autowired
     CategoryService categoryService;
+
     @Autowired
     ProductService productService;
 
     @Autowired
     UserService userService;
 
-    @GetMapping("/footer")
-    public String name() {
-        return "footer";
-    }
-
     @GetMapping({ "/", "/home" })
     public String home(Model model, HttpSession session, Authentication authentication) {
         session.setAttribute("session", session);
+        
+        getUser(session, authentication);
+
+        model.addAttribute("products", productService.getAllProduct());
+        model.addAttribute("categories", categoryService.getAllCategory());
+
+        return "index";
+    }
+
+    public void getUser(HttpSession session, Authentication authentication) {
         String email = "";
         try {
             Object principal = authentication.getPrincipal();
@@ -56,15 +62,11 @@ public class HomeController {
         } catch (Exception e) {
 
         }
-
-        model.addAttribute("products", productService.getAllProduct());
-        model.addAttribute("categories", categoryService.getAllCategory());
-
-        return "index";
     }
 
     @GetMapping("/shop")
-    public String shop(Model model, HttpSession session) {
+    public String shop(Model model, HttpSession session, Authentication authentication) {
+        getUser(session, authentication);
         model.addAttribute("categories", categoryService.getAllCategory());
         model.addAttribute("products", productService.getAllProduct());
         session.setAttribute("session", session);

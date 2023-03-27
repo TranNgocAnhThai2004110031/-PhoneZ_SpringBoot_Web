@@ -15,10 +15,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.gdu.nhom1.shopproject.models.Bill;
 import com.gdu.nhom1.shopproject.models.Product;
 import com.gdu.nhom1.shopproject.services.BillService;
+import com.gdu.nhom1.shopproject.services.CategoryService;
 import com.gdu.nhom1.shopproject.services.ProductService;
 
 @Controller
 public class BillController {
+    @Autowired
+    CategoryService categoryService;
+
     @Autowired
     BillService billService;
 
@@ -49,6 +53,7 @@ public class BillController {
             }
         }
         model.addAttribute("bills", bills);
+        model.addAttribute("categories", categoryService.getAllCategory());
         return "history";
     }
 

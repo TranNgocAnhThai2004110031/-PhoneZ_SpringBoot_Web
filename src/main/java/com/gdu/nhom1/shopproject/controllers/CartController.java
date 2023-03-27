@@ -6,6 +6,8 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,13 +20,18 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.gdu.nhom1.shopproject.dto.BillDTO;
 import com.gdu.nhom1.shopproject.models.Bill;
 import com.gdu.nhom1.shopproject.models.Product;
+import com.gdu.nhom1.shopproject.models.User;
 import com.gdu.nhom1.shopproject.services.BillService;
+import com.gdu.nhom1.shopproject.services.CategoryService;
 import com.gdu.nhom1.shopproject.services.ProductService;
 import com.gdu.nhom1.shopproject.services.UserService;
 
 @Controller
 @SessionAttributes("cart")
 public class CartController {
+    @Autowired
+    CategoryService categoryService;
+
     @Autowired
     ProductService productService;
 
@@ -107,11 +114,12 @@ public class CartController {
 
         session.setAttribute("cartCount", cart.size());
         model.addAttribute("total", cart.stream().mapToDouble(Product::getPrice).sum());
+        model.addAttribute("categories", categoryService.getAllCategory());
         return "/cart";
     }
 
     @GetMapping("/cart")
-    public String cartGet(Model model, HttpSession session) {
+    public String cartGet(Model model, HttpSession session, Authentication authentication) {
         cart = (List<Product>) session.getAttribute("cart");
         if (cart == null) {
             cart = new ArrayList<>();
@@ -130,6 +138,8 @@ public class CartController {
         model.addAttribute("cartCount", cart.size());
         model.addAttribute("total", cart.stream().mapToDouble(Product::getPrice).sum());
         model.addAttribute("cart", cart);
+        model.addAttribute("categories", categoryService.getAllCategory());
+        getUser(session, authentication);
         return "cart";
     }
 
@@ -159,7 +169,7 @@ public class CartController {
     }
 
     @PostMapping("/payNow")
-    public String payNow(@ModelAttribute("billDTO") BillDTO billDTO, Model model, HttpSession session) {
+    public String payNow(@ModelAttribute("billDTO") BillDTO billDTO, Model model, HttpSession session, Authentication authentication) {
         Bill bill = new Bill();
         bill.setId(billDTO.getId());
         // bill.setUser(userService.getUserById(billDTO.getUserId()).get());
@@ -209,7 +219,30 @@ public class CartController {
 
         cart.clear();
         session.setAttribute("cartCount", cart.size());
+        getUser(session, authentication);
         return "/orderPlaced";
+    }
+
+    public void getUser(HttpSession session, Authentication authentication) {
+        String email = "";
+        try {
+            Object principal = authentication.getPrincipal();
+            if (authentication != null) {
+            }
+            if (principal instanceof UserDetails) {
+                email = ((UserDetails) principal).getUsername();
+            } else {
+                email = principal.toString();
+            }
+            // Lấy thông tin user từ database hoặc service
+            User user = userService.findByEmail(email);
+            // Thực hiện các thao tác với thông tin người dùng
+            System.out.println(user.getEmail());
+            session.setAttribute("email", user.getEmail());
+            session.setAttribute("userId", user.getId());
+        } catch (Exception e) {
+
+        }
     }
 
 }
