@@ -1,4 +1,5 @@
 ﻿# PhoneZ
+PhoneZ là một ứng dụng web cung cấp một nền tảng để quản lý và bán các loại điện thoại khác nhau. Nó cho phép người dùng duyệt và tìm kiếm sản phẩm, thêm các mặt hàng vào giỏ hàng và thực hiện thanh toán trực tuyến an toàn. Ứng dụng cũng cung cấp một bảng điều khiển quản trị nơi người quản trị viên có thể quản lý danh mục sản phẩm, sản phẩm, tài khoản người dùng và xem hóa đơn.
 -	Đăng nhập bằng tài khoản admin:
   ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/6941a18d-d4b4-49e3-97fa-351ba95fad37)
   ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/14c7823e-ae48-46ae-9571-70af50a40a68)
@@ -45,9 +46,9 @@
   + Đăng nhập bằng tài khoản user:
   ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/1897dbd8-d94d-4f90-8575-7f081d6af1d8)
   + Truy cập được trang chủ:
-  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/90645e05-b0c5-4c3f-a4a4-1317510c638f)
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/4b376904-1da8-47c2-adaa-162a67e0f10b)
   + Xem danh sách sản phẩm:
-  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/00f4f34b-5a35-4a1f-9bfc-ccd740e53ecf)
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/a4612506-19d0-4d5c-a5fe-31bfdc4fa4f8)
   + Xem chi tiết sản phẩm:
   ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/e3f46d9d-aba5-4b9d-beaf-cbb1df69e389)
   + Tìm kiếm sản phẩm:
@@ -66,5 +67,20 @@
   ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/961c4999-e437-4c8a-a2f3-25efa1cdea98)
   Điền đầy đủ thông tin và ấn PAY NOW
   ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/67379754-7067-44b4-b066-62724e23aa38)
-  Thanh toán thành công và hiển thị ra hoá đơn
+  Thanh toán thành công và hiển thị ra hóa đơn
   ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/dad059eb-a0c6-43ff-a076-ab831635875c)
+  + Không thể truy cập vào trang admin bằng tài khoản user:
+  (Dùng tài khoản user truy cập admin bị thông báo lỗi 403)
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/6d141435-898c-4eb5-9308-6fbe89232ebd)
+- Các chức năng của user không có tài khoản:
+  + Truy cập vào trang chủ:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/90645e05-b0c5-4c3f-a4a4-1317510c638f)
+  + Xem danh sách sản phẩm:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/abb7c0c1-fd27-4e15-a4d3-b0174d0fd133)
+  + Tìm kiếm sản phẩm:
+	  Theo loại:
+    ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/ef03483c-7d0d-4c11-bca6-d0b15f0751ed)
+	  Theo tên sản phẩm:
+    ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/4ae704ff-24b5-4604-a5ae-88211cd26773)
+
+
