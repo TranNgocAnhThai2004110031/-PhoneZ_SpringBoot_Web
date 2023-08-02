@@ -45,15 +45,26 @@
   + Đăng nhập bằng tài khoản user:
   ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/1897dbd8-d94d-4f90-8575-7f081d6af1d8)
   + Truy cập được trang chủ:
-  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/3c0f5a49-c501-4908-8a14-ab2cabe1d68b)
-  ![Uploading image.png…]()
-
-+ Xem danh sách sản phẩm:
- 
-+ Xem chi tiết sản phẩm:
- 
-+ Tìm kiếm sản phẩm:
- 
-+ Tìm kiếm sản phẩm theo loại:
- 
-+ Thêm sản phẩm vào giỏ hàng:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/90645e05-b0c5-4c3f-a4a4-1317510c638f)
+  + Xem danh sách sản phẩm:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/00f4f34b-5a35-4a1f-9bfc-ccd740e53ecf)
+  + Xem chi tiết sản phẩm:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/e3f46d9d-aba5-4b9d-beaf-cbb1df69e389)
+  + Tìm kiếm sản phẩm:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/f728e235-d6b0-4a4f-b385-f13d86a4cb28)
+  + Tìm kiếm sản phẩm theo loại:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/a479af60-ad76-4667-81fb-0ebe0f1014eb)
+  + Thêm sản phẩm vào giỏ hàng:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/74af5bd9-0706-4d37-9082-1156eaaa2e2d)
+  + Thay đổi số lượng sản phẩm trong giỏ hàng:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/f7cf04ab-1735-48bd-9392-38f0259149ff)
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/a13ae020-a203-4665-adb9-8981a342b40f)
+  + Xóa sản phẩm trong giỏ hàng:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/64e48e40-bed8-4574-8e11-eb10a92cbaa2)
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/bf381fc7-f028-4460-bb6e-4498c440a315)
+  + Thanh toán giỏ hàng:
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/961c4999-e437-4c8a-a2f3-25efa1cdea98)
+  Điền đầy đủ thông tin và ấn PAY NOW
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/67379754-7067-44b4-b066-62724e23aa38)
+  Thanh toán thành công và hiển thị ra hoá đơn
+  ![image](https://github.com/TranNgocAnhThai2004110031/PhoneZ_SpringBoot_Web/assets/90894257/dad059eb-a0c6-43ff-a076-ab831635875c)
